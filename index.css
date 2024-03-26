@@ -1,0 +1,11 @@
+body{
+    background-color: rgba(0, 0, 0, 0.884);
+}
+#Bloco{
+    background-color: rgba(207, 150, 97, 0.856);
+    width: 50%;
+    text-align: center;
+    transform: translate(50%, 50px);
+    color: azure;
+    border-radius: 10px;
+}
