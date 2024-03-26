@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>VERIFICADOR DE IDADE</title>
+</head>
+<body>
+    <div id="Bloco">
+        <h1>VERIFICADOR DE IDADE</h1>
+        <form>
+            <p>Sexo:</p>
+            <input type="radio" value="Homem" name="sexo">
+            <label for="Masculino">Masculino</label> 
+
+            <input type="radio" value="Mulher" name="sexo">
+            <label for="Feminino">Feminino</label> 
+
+        </br><label for="Idade">Ano de Nascimento:</label>
+        <input type="number" min="1900" max="2024" name="Ano" >
+        <input type="button" value="Clique aqui" onclick="mostrar()">
+       </form>
+       <p id="Resultado">Detectamos</p>
+       <span id="imagem"></span>
+    </div>
+
+    <script>
+        
+        function mostrar(){
+            var anoNasc = document.querySelector('input[name="Ano"]').value;
+            var Idade = 2024 - anoNasc;
+            var Sexo = document.querySelector('input[name="sexo"]:checked').value;
+            
+            var ResIdade = document.getElementById('Resultado').innerHTML = `Detectamos um/a ${Sexo} com ${Idade} de idade`
+            if (Sexo == 'Homem' && Idade >= 10){
+                document.getElementById("imagem").innerHTML = "<img src= 'https://images.pexels.com/photos/1288182/pexels-photo-1288182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' width='200px' height='200px' style='border-radius: 100%;'>"
+            }
+            if (Sexo == 'Homem' && Idade >= 50){
+                document.getElementById("imagem").innerHTML = "<img src= 'https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' width='200px' height='200px' style='border-radius: 100%;'>"
+            }
+            if (Sexo == 'Homem' && Idade >= 20){
+                document.getElementById("imagem").innerHTML = "<img src= 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' width='200px' height='200px' style='border-radius: 100%;'>"
+            }
+            if (Sexo == 'Mulher' && Idade >= 13 ){
+                document.getElementById("imagem").innerHTML = "<img src= 'https://images.pexels.com/photos/6973960/pexels-photo-6973960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' width='200px' height='200px' style='border-radius: 100%;'>"
+            }
+            if (Sexo == 'Mulher' && Idade >= 20 ){
+                document.getElementById("imagem").innerHTML = "<img src= 'https://images.pexels.com/photos/17555836/pexels-photo-17555836/free-photo-of-por-do-sol-oculos-escuros-oculos-de-sol-mulher.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' width='200px' height='200px' style='border-radius: 100%;'>"
+            }
+            if (Sexo == 'Mulher' && Idade >= 40 ){
+                document.getElementById("imagem").innerHTML = "<img src= 'https://images.pexels.com/photos/1197132/pexels-photo-1197132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' width='200px' height='200px' style='border-radius: 100%;'>"
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>
